@@ -43,7 +43,7 @@ function drawASingleLine(x: number, y: number) {
     ctx.stroke();
 }
 
-for (let i = 0; i < 21; i++) {
+for (let i = 0; i <= 20; i++) { 
     let y = i * 20
     drawASingleLine(0, y,);
 }
