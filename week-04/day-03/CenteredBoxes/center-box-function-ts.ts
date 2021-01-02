@@ -6,11 +6,13 @@ export { };
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
 
-// Create a function that draws a single line and takes 2 parameters:
-// The x and y coordinates of the line's starting point
-// and draws a line from that point to the center of the canvas
-// Draw at least 3 lines with that function using a loop.
+// Create a function that draws one square and takes 1 parameters:
+// The square size
+// and draws a square of that size to the center of the canvas.
+// Draw 3 squares with that function.
+// Avoid code duplication.
 
+let squareSize: number  
 function randomColor() {
     const colors = [
       'black',
@@ -32,18 +34,14 @@ function randomColor() {
     const randomColorIndex = Math.round(randomNumberBetween0AndColorsLength);
     return colors[randomColorIndex];
 }
-  
 
-
-function drawASingleLine(x: number, y: number) {
+function drawAsquare(squareSize: number) {
     ctx.strokeStyle = randomColor();
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(300, 200);
-    ctx.stroke();
+    ctx.strokeRect((canvas.width - squareSize) / 2, (canvas.height - squareSize) / 2, squareSize, squareSize);
 }
 
-for (let i = 0; i <= 20; i++) { 
-    let y = i * 20
-    drawASingleLine(0, y,);
-}
+drawAsquare(200);
+
+drawAsquare(50);
+
+drawAsquare(350);
