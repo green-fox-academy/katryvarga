@@ -15,10 +15,16 @@ export { };
 ctx.fillStyle = 'black'
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+function randomColor() {
+    let grey: string[] = ['#404040','#484848', '#505050', '#686868', '#707070', '#888888', '#A8A8A8', '#B8B8B8'];  
+    let colorpicker: number = Math.round(Math.random() * (grey.length - 1));
+    return grey[colorpicker];
+}
+
 // function createCircleStars(x, y) {
 //     ctx.beginPath();
 //     ctx.moveTo(x, y);
-//     ctx.fillStyle = 'yellow';
+//     ctx.fillStyle = randomColor();
 //     ctx.arc(x, y, 5, 0, Math.PI * 2);
 //     ctx.fill();
 // }
@@ -28,7 +34,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 // function createSquareStars(x, y) {
 //     ctx.beginPath();
 //     ctx.moveTo(x, y);
-//     ctx.fillStyle = 'gold'
+//     ctx.fillStyle = randomColor();
 //     ctx.lineTo(x + 10, y);
 //     ctx.lineTo(x + 10, y +10);
 //     ctx.lineTo(x, y + 10);
@@ -40,7 +46,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 function createStar(x, y) {
     ctx.beginPath();
-    ctx.fillStyle = 'gold'
+    ctx.fillStyle = randomColor();
     ctx.moveTo(x, y);
     ctx.lineTo(x + 25, y);
     ctx.lineTo(x + 5, y + 20);
@@ -57,7 +63,6 @@ let stars = []
 function randomCoordinates() {
     const randomX = Math.round((canvas.width - 50) * Math.random());
     const randomY = Math.round(30 + (canvas.height - 80) * Math.random());
-
     for (let i = 0; i < stars.length; i++) {
         if (
             randomX > stars[i].x - 50 && randomX < stars[i].x + 50
