@@ -5,9 +5,24 @@
 //
 // -  Add all elements an `"a"` at the end
 
-let animals: string[] = ["koal", "pand", "zebr", "anacond", "bo", "chinchill", "cobr", "gorill",
-    "hyen", "hydr", "iguan", "impal", "pum", "tarantul", "pirahn"];
+let animals: string[] = [
+  'koal',
+  'pand',
+  'zebr',
+  'anacond',
+  'bo',
+  'chinchill',
+  'cobr',
+  'gorill',
+  'hyen',
+  'hydr',
+  'iguan',
+  'impal',
+  'pum',
+  'tarantul',
+  'pirahn',
+];
 
 for (let i = 0; i < animals.length; i++) {
-    console.log(animals[i] + 'a');
+  console.log(animals[i] + 'a');
 }

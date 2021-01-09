@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector(".main-canvas") as HTMLCanvasElement;
+const ctx = canvas.getContext("2d");
 export {};
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
@@ -9,32 +9,46 @@ export {};
 // Create a function that takes 1 parameter:
 // A list of [x, y] points
 // and connects them with green lines.
-// Connect these to get a box: 
-// Connect these: 
+// Connect these to get a box:
+// Connect these:
 
-let connectingDotsBox: number[][] = [[10, 10], [290,  10], [290, 290], [10, 290]];
-let connectindDots1: number [][] = [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70], [120, 100], [85, 130], [50, 100]];
+let connectingDotsBox: number[][] = [
+  [10, 10],
+  [290, 10],
+  [290, 290],
+  [10, 290],
+];
+let connectindDots1: number[][] = [
+  [50, 100],
+  [70, 70],
+  [80, 90],
+  [90, 90],
+  [100, 70],
+  [120, 100],
+  [85, 130],
+  [50, 100],
+];
 
-function connectDots(list: any) {
-    ctx.strokeStyle = 'green'
-    ctx.beginPath();
-    ctx.moveTo(list[0][0], list[0][1]);
-    for (let i = 0; i < list.length; i++) {
-        ctx.lineTo(list[i][0], list[i][1]);
-    }
-    ctx.closePath();
-    ctx.stroke();
+function connectDots(list: number[][]) {
+  ctx.strokeStyle = "green";
+  ctx.beginPath();
+  ctx.moveTo(list[0][0], list[0][1]);
+  for (let i: number = 0; i < list.length; i++) {
+    ctx.lineTo(list[i][0], list[i][1]);
+  }
+  ctx.closePath();
+  ctx.stroke();
 }
 
-function connectDotsAndFill(list: any) {
-    ctx.fillStyle = 'green'
-    ctx.beginPath();
-    ctx.moveTo(list[0][0], list[0][1]);
-    for (let i = 0; i < list.length; i++) {
-        ctx.lineTo(list[i][0], list[i][1]);
-    }
-    ctx.closePath();
-    ctx.fill();
+function connectDotsAndFill(list: number[][]) {
+  ctx.fillStyle = "green";
+  ctx.beginPath();
+  ctx.moveTo(list[0][0], list[0][1]);
+  for (let i: number = 0; i < list.length; i++) {
+    ctx.lineTo(list[i][0], list[i][1]);
+  }
+  ctx.closePath();
+  ctx.fill();
 }
 
 connectDots(connectingDotsBox);

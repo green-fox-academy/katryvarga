@@ -29,7 +29,7 @@ function randomColor() {
 //     ctx.fill();
 // }
 
-// createCircleStars(20, 50)
+// createCircleStars(20, 50);
 
 // function createSquareStars(x, y) {
 //     ctx.beginPath();
@@ -42,9 +42,9 @@ function randomColor() {
 //     ctx.fill();
 // }
 
-// createSquareStars( 20, 50)
+// createSquareStars(20, 50);
 
-function createStar(x, y) {
+function createStar(x: number, y: number) {
     ctx.beginPath();
     ctx.fillStyle = randomColor();
     ctx.moveTo(x, y);
@@ -56,7 +56,7 @@ function createStar(x, y) {
     ctx.fill();
 }
 
-// createStar( 200, 200)
+// createStar(200, 200);
 
 let stars = []
 

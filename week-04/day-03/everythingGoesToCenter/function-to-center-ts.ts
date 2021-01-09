@@ -12,20 +12,20 @@ export {};
 // Fill the canvas with lines from the edges, every 20 px, to the center.
 
 function drawASingleLine(x: number, y: number) {
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(300, 200);
-    ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.lineTo(300, 200);
+  ctx.stroke();
 }
 
 // drawASingleLine( 0,0)
 
-for (let y = 0; y <= canvas.height/ 20; y++) { 
-    drawASingleLine(600, y * 20);
-    drawASingleLine(0, y * 20);
+for (let y = 0; y <= canvas.height / 20; y++) {
+  drawASingleLine(600, y * 20);
+  drawASingleLine(0, y * 20);
 }
 
-for (let x = 0; x <= canvas.width/ 20; x++) { 
-    drawASingleLine(x * 20, 0);
-    drawASingleLine(x * 20, 400);
+for (let x = 0; x <= canvas.width / 20; x++) {
+  drawASingleLine(x * 20, 0);
+  drawASingleLine(x * 20, 400);
 }
