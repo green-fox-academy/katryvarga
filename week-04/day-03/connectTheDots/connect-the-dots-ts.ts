@@ -15,7 +15,7 @@ export {};
 let connectingDotsBox: number[][] = [[10, 10], [290,  10], [290, 290], [10, 290]];
 let connectindDots1: number [][] = [[50, 100], [70, 70], [80, 90], [90, 90], [100, 70], [120, 100], [85, 130], [50, 100]];
 
-function connectDots(list) {
+function connectDots(list: any) {
     ctx.strokeStyle = 'green'
     ctx.beginPath();
     ctx.moveTo(list[0][0], list[0][1]);
@@ -26,7 +26,7 @@ function connectDots(list) {
     ctx.stroke();
 }
 
-function connectAndFillDots(list) {
+function connectDotsAndFill(list: any) {
     ctx.fillStyle = 'green'
     ctx.beginPath();
     ctx.moveTo(list[0][0], list[0][1]);
@@ -38,4 +38,4 @@ function connectAndFillDots(list) {
 }
 
 connectDots(connectingDotsBox);
-connectAndFillDots(connectindDots1);
+connectDotsAndFill(connectindDots1);
