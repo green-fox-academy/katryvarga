@@ -14,7 +14,7 @@ class Sharpie {
     this.width = width;
   }
 
-  use() {
+  use(): void {
     this.inkAmount -= 10;
   }
 }
