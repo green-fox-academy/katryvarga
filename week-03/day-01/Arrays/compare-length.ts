@@ -6,12 +6,11 @@
 //   `firstList`
 // - Otherwise log: "firstList is the longer one"
 
-let firstList:  number[] = [1, 2, 3];
+let firstList: number[] = [1, 2, 3];
 let secondList: number[] = [4, 5];
 
 if (firstList.length < secondList.length) {
-    console.log('secondList is longer');
-    
-} else { console.log('fistList is the longer one');
-    
+  console.log("secondList is longer");
+} else {
+  console.log("fistList is the longer one");
 }
