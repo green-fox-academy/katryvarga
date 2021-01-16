@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector(".main-canvas") as HTMLCanvasElement;
+const ctx = canvas.getContext("2d");
 export {};
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
@@ -12,14 +12,13 @@ export {};
 let squareSize: number = 10;
 
 function drawPurpleSquare(x: number, y: number) {
-    ctx.fillStyle = 'purple';
-    ctx.beginPath();
-    ctx.fillRect(x, y, squareSize, squareSize);
+  ctx.fillStyle = "purple";
+  ctx.beginPath();
+  ctx.fillRect(x, y, squareSize, squareSize);
 }
 
 // drawPurpleSquare(10,10);
 
-for (let i = 0; i < 20; i++) {
-    drawPurpleSquare(i * 10,i * 10,);
+for (let i: number = 0; i < 20; i++) {
+  drawPurpleSquare(i * 10, i * 10);
 }
- 

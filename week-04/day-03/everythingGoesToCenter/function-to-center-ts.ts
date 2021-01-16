@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector(".main-canvas") as HTMLCanvasElement;
+const ctx = canvas.getContext("2d");
 export {};
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
@@ -20,12 +20,12 @@ function drawASingleLine(x: number, y: number) {
 
 // drawASingleLine( 0,0)
 
-for (let y = 0; y <= canvas.height / 20; y++) {
+for (let y: number = 0; y <= canvas.height / 20; y++) {
   drawASingleLine(600, y * 20);
   drawASingleLine(0, y * 20);
 }
 
-for (let x = 0; x <= canvas.width / 20; x++) {
+for (let x: number = 0; x <= canvas.width / 20; x++) {
   drawASingleLine(x * 20, 0);
   drawASingleLine(x * 20, 400);
 }

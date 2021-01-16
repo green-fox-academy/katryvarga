@@ -15,11 +15,11 @@ function drawASingleLine(startX: number, startY: number, endX: number, endY: num
 // drawASingleLine(200, 0, 400, 200, 'green')
 
 function linePlay(numberOfLines: number) {
-    for (let i = 0; i < numberOfLines; i++) {
+    for (let i: number = 0; i < numberOfLines; i++) {
         drawASingleLine(i * canvas.width / numberOfLines, 0, canvas.width, i * canvas.height / numberOfLines + canvas.height / numberOfLines, 'purple');
     }
 
-    for (let i = 0; i < numberOfLines; i++) {
+    for (let i: number = 0; i < numberOfLines; i++) {
         drawASingleLine(0, i * canvas.height / numberOfLines, i * canvas.width / numberOfLines + canvas.width / numberOfLines, canvas.height, 'green');
     }
 }

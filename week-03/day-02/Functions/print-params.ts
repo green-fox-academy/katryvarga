@@ -1,10 +1,9 @@
-  
 // -  Create a function called `printParams`
 //    which logs to the console the input parameters
 //    (can have multiple number of arguments)
 
 function printParams(...input: any) {
-    console.log(input);
+  console.log(input);
 }
 
-printParams('my', 'age', 'is:', 29); 
+printParams("my", "age", "is:", 29);

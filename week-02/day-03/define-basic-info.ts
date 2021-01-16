@@ -4,7 +4,7 @@
 // Your height in meters as a number
 // Whether you are married or not as a boolean
 
-let myName: string = 'Vanda';
+let myName: string = "Vanda";
 let age: number = 29;
 let height: number = 1.68;
 let married: boolean = true;

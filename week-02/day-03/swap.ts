@@ -1,9 +1,8 @@
-
 // Swap the values of these variables
 
 let numberToSwap1: number = 123;
 let numberToSwap2: number = 526;
-let temp: any
+let temp: any;
 
 temp = numberToSwap1;
 numberToSwap1 = numberToSwap2;

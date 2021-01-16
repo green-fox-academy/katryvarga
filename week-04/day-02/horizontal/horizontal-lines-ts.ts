@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
-const canvas = document.querySelector('.main-canvas') as HTMLCanvasElement;
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector(".main-canvas") as HTMLCanvasElement;
+const ctx = canvas.getContext("2d");
 export {};
 
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
@@ -12,16 +12,16 @@ export {};
 // Draw at least 3 lines with that function using a loop.
 
 function drawASingleLine(x: number, y: number) {
-    ctx.strokeStyle = 'blue';
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(x + 50, y);
-    ctx.stroke();
+  ctx.strokeStyle = "blue";
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.lineTo(x + 50, y);
+  ctx.stroke();
 }
 
 for (let i: number = 1; i <= 5; i++) {
-    let y: number = i * 50;
-    drawASingleLine(50, y);
+  let y: number = i * 50;
+  drawASingleLine(50, y);
 }
 
 // eltolás

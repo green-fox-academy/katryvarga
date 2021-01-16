@@ -1,8 +1,6 @@
 // create an empty map
 
-let firstObject = {
-
-}
+let firstObject = {};
 
 //print out
 
@@ -33,7 +31,7 @@ console.log(Object.values(firstObject));
 
 // add value D with the key 68
 
-firstObject[68] = 'D';
+firstObject[68] = "D";
 
 console.log(firstObject);
 
@@ -55,11 +53,11 @@ console.log(firstObject);
 console.log(firstObject.hasOwnProperty(100));
 
 if (firstObject.hasOwnProperty(100) === true) {
-    console.log(`There is a value with key 100`);
-} else (firstObject.hasOwnProperty(100) === false); {
-    console.log(`There is no value with key 100`);
+  console.log(`There is a value with key 100`);
+} else firstObject.hasOwnProperty(100) === false;
+{
+  console.log(`There is no value with key 100`);
 }
-
 
 //Remove all the key-value pairs
 

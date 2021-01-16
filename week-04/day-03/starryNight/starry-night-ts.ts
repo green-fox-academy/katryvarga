@@ -63,7 +63,7 @@ let stars = []
 function randomCoordinates() {
     const randomX = Math.round((canvas.width - 50) * Math.random());
     const randomY = Math.round(30 + (canvas.height - 80) * Math.random());
-    for (let i = 0; i < stars.length; i++) {
+    for (let i: number = 0; i < stars.length; i++) {
         if (
             randomX > stars[i].x - 50 && randomX < stars[i].x + 50
             && randomY > stars[i].y - 110 && randomY < stars[i].y + 80

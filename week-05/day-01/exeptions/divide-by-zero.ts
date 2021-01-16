@@ -5,7 +5,7 @@
 
 function divide(inputNumber1: number) {
   if (inputNumber1 / 10 === 0) {
-    console.log('Cannot divide by zero!');
+    console.log("Cannot divide by zero!");
   } else {
     let result = inputNumber1 / 10;
     console.log(result);

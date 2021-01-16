@@ -6,9 +6,9 @@ let input: number = 9;
 let sum: number = 0;
 let average: number = 0;
 
-for (let index = 1; index <= input; index++) {
-    sum = sum + index;
+for (let index: number = 1; index <= input; index++) {
+  sum = sum + index;
 }
 average = sum / input;
 
-console.log('Sum: ' + sum + ', Average: ' + average);
+console.log("Sum: " + sum + ", Average: " + average);

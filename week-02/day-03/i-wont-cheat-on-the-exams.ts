@@ -3,6 +3,6 @@
 
 let lines: number = 100;
 
-for (let index = 0; index < lines; index++) {
-    console.log("I won't cheat on the exam!");
+for (let index: number = 0; index < lines; index++) {
+  console.log("I won't cheat on the exam!");
 }

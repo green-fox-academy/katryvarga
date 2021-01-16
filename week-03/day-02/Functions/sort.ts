@@ -3,8 +3,6 @@
 //  When you are done, add a second boolean parameter to the function
 //  If it is `true` sort the list descending, otherwise ascending
 
-
-
 //  Example:
 console.log(bubble([34, 12, 24, 9, 5]));
 //  should print [5, 9, 12, 24, 34]

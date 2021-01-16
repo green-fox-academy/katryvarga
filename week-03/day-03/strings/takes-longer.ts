@@ -5,7 +5,7 @@
 let quote: string = `Hofstadter's Law: It you expect, even when you take into account Hofstadter's Law.`;
 // let editedQuote = `Hofstadter's Law: It always takes longer than you expect, even when you take into account Hofstadter's Law.`;
 
-let newQuote = quote.substring(0,21) + 'always takes longer than ' + quote.substring(21);
+let newQuote: string = quote.substring(0,21) + 'always takes longer than ' + quote.substring(21);
 
 quote = newQuote;
 

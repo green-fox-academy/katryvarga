@@ -3,12 +3,11 @@
 //    and returns the doubled value
 // -  Log the result of `doubleNumber(baseNumber)` to the console
 
+let baseNumber: number = 123;
 
-let baseNumber: number = 123
-
-function doubleNumber(baseNumber: number ){
-    baseNumber *= 2;
-    console.log(baseNumber);
+function doubleNumber(baseNumber: number) {
+  baseNumber *= 2;
+  console.log(baseNumber);
 }
 
 doubleNumber(baseNumber);

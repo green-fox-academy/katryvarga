@@ -7,11 +7,10 @@
 //
 // The triangle should have as many lines as lineCount is
 
-
 let lineCount: number = 4;
-let star: string = '*';
+let star: string = "*";
 
 for (let i: number = 0; i < lineCount; i++) {
-    console.log(star);
-    star += '*';
+  console.log(star);
+  star += "*";
 }
