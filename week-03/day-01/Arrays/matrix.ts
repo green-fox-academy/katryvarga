@@ -31,20 +31,20 @@ for (let i = 0; i < size; i++) {
 
 //draw a matrix function
 
-// function drawAMatrix(matrixSize: number, a: number, b: number) {
-//     let matrix: number[][] = [];
-//     for (let i = 0; i < matrixSize; i++) {
-//         let insideMatrix = [];
-//         for (let j = 0; j < matrixSize; j++) {
-//             if (i === j) {
-//                 insideMatrix.push(a);
-//             } else {
-//                 insideMatrix.push(b);
-//             }
-//         }
-//         matrix.push(insideMatrix);
-//         console.log(matrix[i]);
-//     }
-// }
+function drawAMatrix(matrixSize: number, a: number, b: number) {
+    let matrix: number[][] = [];
+    for (let i = 0; i < matrixSize; i++) {
+        let insideMatrix = [];
+        for (let j = 0; j < matrixSize; j++) {
+            if (i === j) {
+                insideMatrix.push(a);
+            } else {
+                insideMatrix.push(b);
+            }
+        }
+        matrix.push(insideMatrix);
+        console.log(matrix[i]);
+    }
+}
 
-// drawAMatrix(5, 0, 8);
+drawAMatrix(5, 0, 8);
