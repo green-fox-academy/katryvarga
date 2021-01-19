@@ -12,28 +12,33 @@
 // Person(name, age, gender)
 // Person(): sets name to Jane Doe, age to 30, gender to female
 
-class Person {
+export class Person {
   name: string;
   age: number;
   gender: string;
 
-  constructor(name: string = 'Jane Doe', age: number = 30, gender: string = 'female') {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+  constructor(name?: string, age?: number, gender?: string) {
+    if (!name && !age && !gender) {
+      this.name = "Jane Doe";
+      this.age = 30;
+      this.gender = "female";
+    } else {
+      this.name = name;
+      this.age = age;
+      this.gender = gender;
+    }
   }
 
   introduce(): void {
     console.log(`Hi, I'm ${this.name}, a ${this.age} year old ${this.gender}`);
   }
 
-  getGoal():void {
-    console.log('My goal is: Live for the moment!')
+  getGoal(): void {
+    console.log("My goal is: Live for the moment!");
   }
-
 }
 
-let jane = new Person
+let jane = new Person();
 
-jane.introduce();
-jane.getGoal();
+// jane.introduce();
+// jane.getGoal();
