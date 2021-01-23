@@ -18,22 +18,22 @@ export class Pirate {
 
   constructor() {
     this.intoxication = 0;
-    this.status = "alive";
+    this.status = 'alive';
   }
 
   drinkSomeRum(): void {
-    if (this.status !== "dead") {
+    if (this.status !== 'dead') {
       this.intoxication++;
-      this.status = "alive";
+      this.status = 'alive';
     } else {
-      console.log("He is dead!");
+      console.log('He is dead!');
     }
   }
 
   howsItGoingMate(): void {
-    if (this.status !== "dead") {
+    if (this.status !== 'dead') {
       if (this.intoxication <= 4) {
-        console.log("Pour me anudder!");
+        console.log('Pour me anudder!');
       } else {
         console.log("Arghh, I'ma Pirate. How d'ya d'ink its goin?");
       }
@@ -41,7 +41,7 @@ export class Pirate {
   }
 
   die(): void {
-    this.status = "dead";
+    this.status = 'dead';
   }
 
   brawl(pirate: Pirate): void {
@@ -64,8 +64,6 @@ let tom = new Pirate();
 // tom.drinkSomeRum();
 // tom.drinkSomeRum();
 // tom.drinkSomeRum();
-
-
 
 // tom.howsItGoingMate();
 // fred.drinkSomeRum();

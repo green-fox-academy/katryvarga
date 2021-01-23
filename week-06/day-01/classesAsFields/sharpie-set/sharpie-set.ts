@@ -4,7 +4,7 @@
 // countUsable() -> sharpie is usable if it has ink in it
 // removeTrash() -> removes all unusable sharpies
 
-import { Sharpie } from "./sharpie";
+import { Sharpie } from './sharpie';
 
 class SharpieSet {
   sharpie: Sharpie[] = [];
@@ -32,11 +32,11 @@ class SharpieSet {
   }
 }
 
-let blue = new Sharpie("blue", 20);
-let green = new Sharpie("green", 20);
-let pink = new Sharpie("pink", 20);
-let yellow = new Sharpie("yellow", 20);
-let black = new Sharpie("black", 20);
+let blue = new Sharpie('blue', 20);
+let green = new Sharpie('green', 20);
+let pink = new Sharpie('pink', 20);
+let yellow = new Sharpie('yellow', 20);
+let black = new Sharpie('black', 20);
 
 let newSetOfSharpie = new SharpieSet(blue, green, pink, yellow, black);
 

@@ -26,6 +26,4 @@ export class Sum {
 }
 
 let numArray = new Sum();
-numArray.sumNumbers([2,3]);
-
-
+numArray.sumNumbers([2, 3]);

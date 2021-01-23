@@ -1,5 +1,5 @@
-import * as test from "tape";
-import { Apple } from "./apples";
+import * as test from 'tape';
+import { Apple } from './apples';
 
 test(`getApple(myObject) should return apple`, (t) => {
   const myObject = new Apple();
@@ -12,10 +12,9 @@ test(`getApple(myObject) should return apple`, (t) => {
 
 // test(`getApple(myObject) should return apple`, (t) => {
 //     const myObject = new Apple();
-  
+
 //     const actual = myObject.getApple(`pear`);
 //     const expected = `apple`;
 //     t.equal(actual, expected);
 //     t.end();
 //   });
-  

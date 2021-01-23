@@ -11,7 +11,7 @@
 // when watering it the tree can only absorb the 40% of the water
 // eg. watering with 10 the tree's amount of water should only increase with 4
 
-import { Plant } from "./plants";
+import { Plant } from './plants';
 
 export class Garden {
   private plants: Plant[] = [];
@@ -39,6 +39,6 @@ export class Garden {
 
   public printAll(): void {
     this.plants.forEach((plant: Plant) => plant.printInfo());
-    console.log("\n");
+    console.log('\n');
   }
 }

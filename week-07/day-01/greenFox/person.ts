@@ -19,9 +19,9 @@ export class Person {
 
   constructor(name?: string, age?: number, gender?: string) {
     if (!name && !age && !gender) {
-      this.name = "Jane Doe";
+      this.name = 'Jane Doe';
       this.age = 30;
-      this.gender = "female";
+      this.gender = 'female';
     } else {
       this.name = name;
       this.age = age;
@@ -34,7 +34,7 @@ export class Person {
   }
 
   getGoal(): void {
-    console.log("My goal is: Live for the moment!");
+    console.log('My goal is: Live for the moment!');
   }
 }
 

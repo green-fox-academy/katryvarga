@@ -10,7 +10,7 @@
 // Mentor(name, age, gender, level)
 // Mentor(): sets name to Jane Doe, age to 30, gender to female, level to intermediate
 
-import { Person } from "./person";
+import { Person } from './person';
 
 export class Mentor extends Person {
   level: string;
@@ -29,9 +29,9 @@ export class Mentor extends Person {
       this.level = level;
     }
   }
-  
+
   getGoal(): void {
-    console.log("My goal is: Educate brilliant junior software developers.");
+    console.log('My goal is: Educate brilliant junior software developers.');
   }
 
   introduce(): void {

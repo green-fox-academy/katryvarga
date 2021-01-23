@@ -18,7 +18,12 @@ class BlogPost {
   text: string;
   publicationDate: string;
 
-  constructor(authorName: string, title: string, text: string, publicationDate: string) {
+  constructor(
+    authorName: string,
+    title: string,
+    text: string,
+    publicationDate: string
+  ) {
     this.authorName = authorName;
     this.title = title;
     this.text = text;
@@ -26,11 +31,18 @@ class BlogPost {
   }
 
   blogpost(): void {
-    console.log(`"${this.title}" titled by ${this.authorName} posted at "${this.publicationDate}"\n ${this.text}`);
+    console.log(
+      `"${this.title}" titled by ${this.authorName} posted at "${this.publicationDate}"\n ${this.text}`
+    );
   }
 }
 
-let loremIpsum = new BlogPost('John Doe', 'Lorem Ipsum', 'Lorem ipsum dolor sit amet.', '2000.05.04.');
+let loremIpsum = new BlogPost(
+  'John Doe',
+  'Lorem Ipsum',
+  'Lorem ipsum dolor sit amet.',
+  '2000.05.04.'
+);
 let waitButWhy = new BlogPost(
   'Tim Urban',
   'Wait but why',

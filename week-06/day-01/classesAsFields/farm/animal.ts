@@ -7,7 +7,7 @@
 // Every animal can play() which increases both by one
 
 export class Animal {
-  species: string; 
+  species: string;
   hunger: number = 50;
   thirst: number = 50;
 

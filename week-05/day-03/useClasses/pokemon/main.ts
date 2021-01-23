@@ -1,4 +1,4 @@
-import { Pokemon } from "./Pokemon";
+import { Pokemon } from './Pokemon';
 
 let pokemonOfAsh: Pokemon[] = initializePokemon();
 
@@ -8,7 +8,7 @@ let pokemonOfAsh: Pokemon[] = initializePokemon();
 // Ash has a few pokemon.
 // A wild pokemon appeared!
 
-let wildPokemon: Pokemon = new Pokemon("Oddish", "leaf", "water");
+let wildPokemon: Pokemon = new Pokemon('Oddish', 'leaf', 'water');
 
 // Which pokemon should Ash use?
 
@@ -16,11 +16,11 @@ let wildPokemon: Pokemon = new Pokemon("Oddish", "leaf", "water");
 
 function initializePokemon(): Pokemon[] {
   return [
-    new Pokemon("Balbasaur", "leaf", "water"),
-    new Pokemon("Pikatchu", "electric", "water"),
-    new Pokemon("Charizard", "fire", "leaf"),
-    new Pokemon("Balbasaur", "water", "fire"),
-    new Pokemon("Kingler", "water", "fire"),
+    new Pokemon('Balbasaur', 'leaf', 'water'),
+    new Pokemon('Pikatchu', 'electric', 'water'),
+    new Pokemon('Charizard', 'fire', 'leaf'),
+    new Pokemon('Balbasaur', 'water', 'fire'),
+    new Pokemon('Kingler', 'water', 'fire'),
   ];
 }
 

@@ -29,7 +29,7 @@ export class Plant {
   public printInfo(): void {
     console.log(
       `The ${this.color} ${this.plantType} ${
-        this.needsWatering() === true ? "needs" : "doesn't need"
+        this.needsWatering() === true ? 'needs' : "doesn't need"
       } water`
     );
   }

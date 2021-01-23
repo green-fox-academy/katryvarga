@@ -15,7 +15,7 @@ export class Sharpie {
   }
 
   use(): void {
-    this.inkAmount --;
+    this.inkAmount--;
   }
 }
 

@@ -12,7 +12,7 @@
 // Sponsor(name, age, gender, company): beside the given parameters, it sets hiredStudents to 0
 // Sponsor(): sets name to Jane Doe, age to 30, gender to female, company to Google and hiredStudents to 0
 
-import { Person } from "./person";
+import { Person } from './person';
 
 export class Sponsor extends Person {
   company: string;
@@ -34,9 +34,9 @@ export class Sponsor extends Person {
       this.hiredStudents = 0;
     }
   }
-  
+
   getGoal(): void {
-    console.log("My goal is: Hire brilliant junior software developers.");
+    console.log('My goal is: Hire brilliant junior software developers.');
   }
 
   introduce(): void {

@@ -10,7 +10,7 @@
 
 class Student {
   learn(): void {
-    console.log("The student is learning something new");
+    console.log('The student is learning something new');
   }
 
   question(teacher: Teacher): void {
@@ -24,7 +24,7 @@ class Teacher {
   }
 
   answer(): void {
-    console.log("The teacher is answering a question");
+    console.log('The teacher is answering a question');
   }
 }
 

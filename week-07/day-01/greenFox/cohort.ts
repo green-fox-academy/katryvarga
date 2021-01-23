@@ -1,6 +1,6 @@
 // Create a Cohort class that has the following
 
-import { Student } from "./student";
+import { Student } from './student';
 
 // fields:
 // name: the name of the cohort
@@ -14,7 +14,7 @@ import { Student } from "./student";
 
 // Cohort(name): beside the given parameter, it sets students and mentors as empty lists
 
-import { Mentor } from "./mentor";
+import { Mentor } from './mentor';
 
 export class Cohort {
   name: string;

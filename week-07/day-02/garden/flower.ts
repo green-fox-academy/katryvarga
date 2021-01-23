@@ -1,8 +1,8 @@
-import { Plant } from "./plants";
+import { Plant } from './plants';
 
 export class Flower extends Plant {
   constructor(color: string) {
-    super(0.75, 5, "Flower", color);
+    super(0.75, 5, 'Flower', color);
   }
 }
 

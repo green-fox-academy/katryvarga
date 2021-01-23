@@ -5,7 +5,7 @@
 // breed() -> creates a new animal if there's place for it
 // slaughter() -> removes the least hungry animal
 
-import { Animal } from "./animal";
+import { Animal } from './animal';
 
 class Farm {
   animals: Animal[] = [];
@@ -21,7 +21,7 @@ class Farm {
       this.slots--;
       this.animals.push(animal);
     } else {
-      console.log("There is no more place for a new animal");
+      console.log('There is no more place for a new animal');
     }
   }
 
@@ -50,8 +50,8 @@ farm1.breed(bunny);
 
 console.log(farm1);
 
-cat.play
-cat.play
+cat.play;
+cat.play;
 
 farm1.slaughter;
 console.log(farm1);

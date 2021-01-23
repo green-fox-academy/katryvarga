@@ -1,4 +1,4 @@
-import { Pirate } from "./pirate";
+import { Pirate } from './pirate';
 
 class Ship {
   crew: Pirate[];
@@ -10,14 +10,11 @@ class Ship {
   }
 
   fillShip(): void {
-    
     for (let i: number = 0; i < Math.round(Math.random() * 20 - 1); i++) {
       this.crew.push(new Pirate());
     }
     this.captain = new Pirate();
   }
-
-  
 }
 
 let ship1 = new Ship();
@@ -29,4 +26,3 @@ let ship2 = new Ship();
 
 ship2.fillShip;
 console.log(ship2);
-
