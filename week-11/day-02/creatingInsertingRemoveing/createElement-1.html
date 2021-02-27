@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Workshop: CreateElement</title>
+  </head>
+  <body>
+    <ul class="asteroids">
+      <li id="b325" class="asteroid">The King</li>
+      <li class="asteroid b326">The Conceited Man</li>
+    </ul>
+    <div class="container"></div>
+
+    <script>
+      const asteroidList = document.querySelector('ul.asteroids');
+      const greenFoxAsteroid = document.createElement('li');
+      newAsteroid.textContent = 'The Green Fox';
+      asteroidList.appendChild(newAsteroid);
+
+      const LamplighterAsteroid = document.createElement('li');
+      LamplighterAsteroid.textContent = 'The Lamplighter';
+      asteroids.appendChild(LamplighterAsteroid);
+
+      const container = document.querySelector('.container');
+      const heading = document.createElement('h1');
+      heading.textContent = 'I can add elements to the DOM!';
+      container.appendChild(heading);
+
+      const newImage = document.createElement('img');
+      newImage.src =
+        'https://cnet2.cbsistatic.com/img/cu9RS5Lw1I1usJJFNycnXTZAonc=/1200x675/2020/09/21/d044f9f6-d4b0-4996-997c-9fe52b0f616e/nasaasteroidillustration.jpg';
+      container.appendChild(newImage);
+    </script>
+  </body>
+</html>

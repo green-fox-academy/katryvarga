@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Workshop: innerHTML, textContent</title>
+  </head>
+  <body>
+    <ul>
+      <li>placeholder</li>
+      <li>placeholder</li>
+      <li>placeholder</li>
+      <li>placeholder</li>
+    </ul>
+
+    <script>
+      const newList = ['apple', 'banana', 'cat', 'dog'];
+      const htmlList = document.querySelectorAll('li');
+
+      for (let i = 0; i < htmlList.length; i++) {
+        htmlList[i].innerHTML = newList[i];
+      }
+
+      const ulContainer = document.querySelector('ul');
+      ulContainer.style.backgroundColor = 'limegreen';
+    </script>
+  </body>
+</html>
