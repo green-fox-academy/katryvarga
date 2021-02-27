@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  width: 300px;
+  height: 300px;
+}
+
+.green {
+  background-color: rgb(115, 238, 140);
+}
+
+.yellow {
+  background-color: rgb(247, 247, 142);
+}
+
+.purple {
+  background-color: rgb(243, 135, 243);
+}
