@@ -2,85 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap"
+      rel="stylesheet"
+    />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>My gallery project</title>
+    <title>Photo Gallery</title>
   </head>
   <body>
-    <div class="container">
-      <div class="photos">
-        <button id="previous" onclick="plusImage(-1,0)">
-          <img class="_button" src="photos/arrow.svg" />
-        </button>
-
-        <div class="actualpicture">
-          <img class="photo" src="photos/IMG_1.JPG" />
-          <div class="description">
-            <h2>Mátra 2021</h2>
-            <p>Nimród,Boti,Nóri</p>
+    <div id="main">
+      <div id="slide">
+        <div id="leftButton" class="button">
+          <img src="/photos2/arrow.svg" class="arrow" />
+        </div>
+        <div id="photoBox">
+          <div id="picture">
+            <div id="description"></div>
           </div>
         </div>
-      </div>
-
-      <div class="actualpicture">
-        <img class="photo" src="photos/IMG_2.jpg" />
-        <div class="description">
-          <h2>Mikulás 2020</h2>
-          <p>Nimród,Boti,Nóri</p>
+        <div id="rightButton" class="button">
+          <img src="/photos2/arrow.svg" class="arrow" />
         </div>
       </div>
-
-      <div class="actualpicture">
-        <img class="photo" src="photos/IMG_3.JPEG" />
-        <div class="description">
-          <h2>Nimród</h2>
-          <p>Nimród 6. születésnap</p>
-        </div>
-      </div>
-
-      <div class="actualpicture">
-        <img class="photo" src="photos/IMG_4.jpg" />
-        <div class="description">
-          <h2>Botond</h2>
-          <p>Boti 4. születésnap</p>
-        </div>
-      </div>
-
-      <div class="actualpicture">
-        <img class="photo" src="photos/IMG_5.JPG" />
-        <div class="description">
-          <h2>Nóra</h2>
-          <p>Nóri 1. születésnap</p>
-        </div>
-      </div>
-
-      <div class="actualpicture">
-        <img class="photo" src="photos/IMG_6.jpg" />
-        <div class="description">
-          <h2>Tanösvény 2020</h2>
-          <p>Nimród,Boti</p>
-        </div>
-      </div>
-
-      <div class="actualpicture">
-        <img class="photo" src="photos/IMG_7.jpg" />
-        <div class="description">
-          <h2>Nóri 2020</h2>
-          <p>Nóri 11 hónapos</p>
-        </div>
-      </div>
-
-      <div class="actualpicture">
-        <img class="photo" src="photos/IMG_8.JPEG" />
-        <div class="description">
-          <h2>Sakk 2020</h2>
-          <p>Nimród,Boti</p>
-        </div>
-      </div>
+      <div id="iconGallery"></div>
     </div>
-    <button id="next" onclick="plusImage(1,0)"><img class="_button" src=""></button>
-</div>
-    </div>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
