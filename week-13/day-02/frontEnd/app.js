@@ -1,5 +1,4 @@
 const express = require('express');
-const { get } = require('http');
 const path = require('path');
 
 const app = express();
@@ -9,10 +8,6 @@ app.use(express.static('assets'));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
-});
-
-app.listen(PORT, () => {
-  console.log(`The server is up and running on ${PORT}`);
 });
 
 app.get('/doubling', (req, res) => {
@@ -41,16 +36,19 @@ app.get('/greeter', (req, res) => {
     result = {
       error: `Please provide a name and a title!`,
     };
+    res.status(400);
   } else if (title === undefined) {
     result = {
       error: `Please provide a title!`,
     };
+    res.status(400);
   } else {
     result = {
       error: `Please provide a name!`,
     };
+    res.status(400);
   }
-  res.send(result);
+  res.end(JSON.stringify(result));
 });
 
 app.get('/appenda/:word', (req, res) => {
@@ -62,4 +60,24 @@ app.get('/appenda/:word', (req, res) => {
     result = { error: 'Please provide an input!' };
   }
   res.send(result);
+});
+
+function sum(number) {
+  let result = 0;
+  for (let i = number; i > 0; i--) {
+    result += i;
+  }
+  return result;
+}
+
+function factor(number) {
+  let result = 1;
+  for (let i = number; i > 0; i--) {
+    result *= i;
+  }
+  return result;
+}
+
+app.listen(PORT, () => {
+  console.log(`The server is up and running on ${PORT}`);
 });
