@@ -62,22 +62,6 @@ app.get('/appenda/:word', (req, res) => {
   res.send(result);
 });
 
-function sum(number) {
-  let result = 0;
-  for (let i = number; i > 0; i--) {
-    result += i;
-  }
-  return result;
-}
-
-function factor(number) {
-  let result = 1;
-  for (let i = number; i > 0; i--) {
-    result *= i;
-  }
-  return result;
-}
-
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
 });
