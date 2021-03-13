@@ -1,5 +1,5 @@
 const express = require('express');
-
+const path = require('path');
 const app = express();
 const PORT = 3000;
 
@@ -22,6 +22,7 @@ app.post('/arrays', (req, res) => {
   } else {
     result = { error: 'Please provide what to do with the numbers!' };
   }
+  res.send(result);
 });
 
 function sum([array]) {
