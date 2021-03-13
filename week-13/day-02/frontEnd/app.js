@@ -1,4 +1,5 @@
 const express = require('express');
+const { get } = require('http');
 const path = require('path');
 
 const app = express();
@@ -48,6 +49,17 @@ app.get('/greeter', (req, res) => {
     result = {
       error: `Please provide a name!`,
     };
+  }
+  res.send(result);
+});
+
+app.get('/appenda/:word', (req, res) => {
+  let word = req.params.word;
+  let result;
+  if (word !== undefined) {
+    result = { appended: word + 'a' };
+  } else {
+    result = { error: 'Please provide an input!' };
   }
   res.send(result);
 });
