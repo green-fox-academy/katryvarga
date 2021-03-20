@@ -10,7 +10,7 @@ header {
   background-color: palevioletred;
   display: flex;
 }
-#leftLink {
+#left-link {
   display: flex;
   list-style: none;
   justify-content: start;
@@ -23,9 +23,9 @@ li {
   margin-right: 5%;
 }
 
-#rightLink {
+#right-link {
   display: flex;
-  margin-left: 55%;
+  margin-left: 45%;
   list-style: none;
   width: 100px;
   height: 50px;
@@ -38,7 +38,7 @@ li {
   flex-direction: row;
 }
 
-.mainContent {
+.main-content {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -57,7 +57,7 @@ p {
   font-size: 20px;
 }
 
-#squareList {
+#square-list {
   display: flex;
   align-self: center;
   position: relative;
@@ -73,7 +73,7 @@ p {
   list-style: none;
 }
 
-.mainBottom {
+.main-bottom {
   display: flex;
 }
 

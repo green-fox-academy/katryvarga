@@ -15,21 +15,21 @@ header {
   height: 100vh;
 }
 
-.leftSideBar {
+.left-sidebar {
   background-color: brown;
   flex-grow: 1;
   margin-right: 2%;
 }
 
-.mainContent {
+.main-content {
   display: flex;
   background-color: lightgreen;
-  justify-content:flex-end;
+  justify-content: flex-end;
   align-items: flex-end;
   flex-grow: 2;
 }
 
-.rightSideBar {
+.right-sidebar {
   background-color: midnightblue;
   flex-grow: 1;
   margin-left: 2%;

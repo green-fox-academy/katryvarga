@@ -32,7 +32,7 @@ li {
   flex-direction: row-reverse;
 }
 
-.mainContent {
+.main-content {
   background-color: rgb(255, 202, 196);
   margin-top: 6%;
   width: 70%;
