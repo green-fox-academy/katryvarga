@@ -1,14 +1,14 @@
-for (let i = 2; i < 101; i++) {
+for (let i = 1; i <= 100; i++) {
   const newDiv = document.createElement('div');
   newDiv.textContent = i;
   if (isPrime(i) === true) {
     setTimeout(() => {
-      div.classList.add('prime');
-    }, i * 100);
+      newDiv.setAttribute('class', 'prime');
+    }, i * 1000);
   } else {
     setTimeout(() => {
-      div.classList.add('not-prime');
-    }, i * 100);
+      newDiv.setAttribute('class', 'not-prime');
+    }, i * 1000);
   }
   document.querySelector('section').appendChild(newDiv);
 }
