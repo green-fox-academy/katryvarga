@@ -22,6 +22,22 @@
         { petName: 'Carpet snake', owner: 'Veda' },
         { petName: 'Lesser mouse lemur', owner: 'Isidor' },
       ];
+
+      const main = document.querySelector('main');
+
+      for (let i = 0; i < kids.length; i++) {
+        let article = document.createElement('article');
+        let h3 = document.createElement('h3');
+        let p = document.createElement('p');
+
+        h3.innerHTML = kids[i].owner;
+        p.innerHTML = kids[i].petName;
+
+        article.appendChild(h3);
+        article.appendChild(p);
+
+        main.appendChild(article);
+      }
     </script>
   </body>
 </html>
