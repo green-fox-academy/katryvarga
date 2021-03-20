@@ -33,17 +33,17 @@ body {
   background-color: rgb(191, 191, 191);
 }
 
-#rightButton {
+#right-button {
   transform: rotateY(180deg);
 }
 
-#photoBox {
+#photo-box {
   height: 400px;
   width: 600px;
   background-color: white;
 }
 
-#iconGallery {
+#icon-gallery {
   display: flex;
   justify-content: center;
   margin-top: 20px;

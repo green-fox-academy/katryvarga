@@ -5,9 +5,9 @@ let counter = 0;
 
 const showedPictures = document.querySelector('#picture');
 const photoDescription = document.querySelector('#description');
-const iconList = document.querySelector('#iconGallery');
-const rightButton = document.querySelector('#rightButton');
-const leftButton = document.querySelector('#leftButton');
+const iconList = document.querySelector('#icon-gallery');
+const rightButton = document.querySelector('#right-button');
+const leftButton = document.querySelector('#left-button');
 const body = document.querySelector('body');
 
 const picture = document.createElement('img');
