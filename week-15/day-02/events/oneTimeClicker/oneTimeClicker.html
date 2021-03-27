@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Workshop: EventListeners</title>
+  </head>
+  <body>
+    <button>Click me</button>
+    <script>
+      const button = document.querySelector('button');
+
+      button.addEventListener(`click`, clicking);
+
+      function clicking() {
+        console.log(new Date());
+        button.removeEventListener(`click`, clicking);
+      }
+
+    //   let timeStamp = 0;
+    //   button.addEventListener(`click`, (event) => {
+    //     if (timeStamp === 0) {
+    //       console.log(new Date());
+    //       timeStamp = event.timeStamp;
+    //     }
+    //   });
+    </script>
+  </body>
+</html>
