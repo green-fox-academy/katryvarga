@@ -9,8 +9,7 @@ const conn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'password',
-  database: 'bookinfo',
-  insecureAuth: `true`,
+  insecureAuth: `true`
 });
 
 conn.connect((err) => {
