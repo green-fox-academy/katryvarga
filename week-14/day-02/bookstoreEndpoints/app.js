@@ -8,10 +8,12 @@ const PORT = 3000;
 const conn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'password', 
+  password: 'password',
+  database: 'bookinfo',
+  insecureAuth: `true`,
 });
 
-conn.connect((err, result) => {
+conn.connect((err) => {
   if (err) {
    console.log('Cannot connect to the database', err);
    return; 
