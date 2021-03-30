@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Bookstore</title>
-</head>
-<body>
-    <table></table>
-    <script src="../app.js"></script>
-</body>
+  </head>
+  <body>
+    <div id="container">
+      <div>
+        Category:
+        <input id="category" type="text" />
+      </div>
+      <div>
+        Publisher:
+        <input id="publisher" type="text" />
+      </div>
+      <div>
+        Price lower than as:
+        <input id="plt" type="number" />
+      </div>
+      <div>
+        Price greater than as:
+        <input id="pgt" type="number" />
+      </div>
+    </div>
+    <button>Search</button>
+    <table>
+      <thead>
+        <th>Booktitle</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Publisher</th>
+        <th>Price</th>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="script.js"></script>
+  </body>
 </html>
