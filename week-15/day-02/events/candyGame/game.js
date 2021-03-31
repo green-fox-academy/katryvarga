@@ -12,7 +12,9 @@ createCandysBtn.addEventListener('click', () => {
   createCandy(1);
 });
 
-buyLollipopsBtn.addEventListener('click', buyLollipop());
+buyLollipopsBtn.addEventListener('click', () => {
+  buyLollipop();
+});
 
 makeCandyRainBtn.addEventListener('click', () => {
   if (production !== 0) {
@@ -29,13 +31,13 @@ function createCandy(number) {
 }
 
 function buyLollipop() {
-  if (candyCounter >= 10) {
+  if (parseInt(candyCounter.textContent) >= 5) {
     lollypops++;
-    lollypopCounter.innerHTML += '🍭';
-    candies -= 10;
+    lollypopCounter.textContent += '🍭';
+    candies -= 5;
     candyCounter.innerHTML = candies;
   }
-  if (lollypops >= 10) {
+  if (lollypops >= 5) {
     generateCandy();
     lollipop = 0;
   }
@@ -43,7 +45,7 @@ function buyLollipop() {
 
 function generateCandy() {
   let interval = setInterval(() => {
-    if (candyCounter >= 10) {
+    if (parseInt(candyCounter.textContent) >= 10) {
       stopInterval(interval);
     } else {
       createCandy(1);
