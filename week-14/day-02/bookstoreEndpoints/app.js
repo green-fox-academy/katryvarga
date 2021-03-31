@@ -37,7 +37,7 @@ app.get('/titles', (req, res) => {
 
 app.get('/allinfo', (req, res) => {
   let queryAllInfo =
-    'SELECT * FROM book_mast LEFT JOIN author ON author.aut_id = book_mast.aut_id LEFT JOIN category ON category.cate_id = book_mast.cate_id JOIN publisher ON publisher.pub_id = book_mast.pub_id';
+    'SELECT * FROM book_mast LEFT JOIN author ON author.aut_id = book_mast.aut_id LEFT JOIN category ON category.cate_id = book_mast.cate_id LEFT JOIN publisher ON publisher.pub_id = book_mast.pub_id';
   let category = req.query.category;
   let publisher = req.query.publisher;
   let plt = req.query.plt;
