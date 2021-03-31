@@ -48,11 +48,11 @@ app.post('/posts', (req, res) => {
     title: JSON.parse(req.body).title,
     url: JSON.parse(req.body).url,
   };
-  conn.query('INSERT INTO posts SET ?', newPost, (err, rows) => {
+  conn.query('INSERT INTO posts SET ?', post, (err, rows) => {
     if (err) {
       res.status(500).json({ error: `database error` });
     }
-    res.status(200).json({ row });
+    res.status(200).json({ rows });
   });
 });
 
