@@ -26,6 +26,36 @@ app.get('/hello', (req, res) => {
   res.send('Hello Word');
 });
 
+app.get('/posts', (req, res) => {
+  req.accepts('application/json');
+  req.header('content-type', 'application/json');
+  conn.query(`SELECT * FROM post`, (err, result) => {
+    if (err) {
+      res.status(500).json({ error: `database error` });
+      return;
+    }
+    return res
+      .status(200)
+      .contentType(`application/json`)
+      .json({ posts: result });
+  });
+});
+
+app.post('/posts', (req, res) => {
+  req.accepts('application/json');
+  req.header('content-type', 'application/json');
+  let post = {
+    title: JSON.parse(req.body).title,
+    url: JSON.parse(req.body).url,
+  };
+  conn.query('INSERT INTO posts SET ?', newPost, (err, rows) => {
+    if (err) {
+      res.status(500).json({ error: `database error` });
+    }
+    res.status(200).json({ row });
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
 });
