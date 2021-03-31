@@ -70,9 +70,9 @@ function createUrl() {
   }
   if (pgtValue) {
     if (!isFirstSearch) {
-      url = url + `&pgt=${pltValue}`;
+      url = url + `&pgt=${pgtValue}`;
     } else {
-      url = url + `?pgt=${pltValue}`;
+      url = url + `?pgt=${pgtValue}`;
       isFirstSearch = false;
     }
   }

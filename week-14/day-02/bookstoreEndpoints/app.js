@@ -63,14 +63,14 @@ app.get('/allinfo', (req, res) => {
       if (!isFirstSearch) {
         queryFilter = queryFilter + ' AND ';
       }
-      queryFilter = queryFilter + 'book_mast.book_price < ' + `'${plt}'`;
+      queryFilter = queryFilter + 'book_mast.book_price < ' + `${plt}`;
       isFirstSearch = false;
     }
     if (pgt) {
       if (!isFirstSearch) {
         queryFilter = queryFilter + ' AND ';
       }
-      queryFilter = queryFilter + 'book_mast.book_price > ' + `'${pgt}'`;
+      queryFilter = queryFilter + 'book_mast.book_price > ' + `${pgt}`;
       isFirstSearch = false;
     }
   }
