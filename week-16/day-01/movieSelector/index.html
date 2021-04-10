@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Movie selector</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title">Movie Selector</div>
+      <form>
+        <select name="selector" id="genre-selector">
+          <option value="select">Select a genre</option>
+          <option value="sci-fi" id="scifi" class="genre">Sci-fi</option>
+          <option value="drama" id="drama" class="genre">Drama</option>
+          <option value="comedy" id="comedy" class="genre">Comedy</option>
+        </select>
+        <select name="selector" id="movie-selector">
+          <option value="select">Select a movie</option>
+          <option value="moon" id="moon" class="sci-fi">Moon</option>
+          <option value="2001:a space odyssey" id="odyssey" class="sci-fi">
+            2001:A Space Odyssey
+          </option>
+          <option value="contact" id="contact" class="sci-fi">Contact</option>
+          <option value="darkest hour" id="darkest" class="drama">
+            Darkest Hour
+          </option>
+          <option value="there will be bood" id="blood" class="drama">
+            There Will Be Blood
+          </option>
+          <option value="american beauty" id="american" class="drama">
+            American Beauty
+          </option>
+          <option value="airplane!" id="airplane" class="comedy">
+            Airplane!
+          </option>
+          <option value="deadpool" id="deadpool" class="comedy">
+            Deadpool
+          </option>
+          <option value="wayne`s world" id="wayne" class="comedy">
+            Wayne`s World
+          </option>
+        </select>
+      </form>
+      <div id="selected">The selected movie is: -</div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
