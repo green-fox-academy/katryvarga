@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>What is your favourite pet?</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <form>
+      <div>
+        <p>What is your favourite pet?</p>
+      </div>
+      <div>
+        <input type="radio" name="pet" id="dog" />
+        <label for="dog">Dog</label>
+      </div>
+      <div>
+        <input type="radio" name="pet" id="cat" />
+        <label for="cat">Cat</label>
+      </div>
+      <div>
+        <input type="radio" name="pet" id="fish" />
+        <label for="fish">Victor, the goldfish</label>
+      </div>
+      <div>
+        <p>Do you want to sign up for cat facts?</p>
+      </div>
+      <div>
+        <input type="radio" name="singup" id="no" />
+        <label for="no">No</label>
+      </div>
+      <div>
+        <input type="radio" name="singup" id="yes" />
+        <label for="yes">Yes</label>
+      </div>
+      <div id="buttons">
+        <button id="love-cats">I Love cats</button>
+        <button id="singup">Sign up</button>
+      </div>
+    </form>
+    <script src="app.js"></script>
+  </body>
 </html>
