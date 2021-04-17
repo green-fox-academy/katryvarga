@@ -5,6 +5,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+app.use(express.static('public'));
 
 const conn = mysql.createConnection({
   host: 'localhost',
@@ -22,14 +23,18 @@ conn.connect((err) => {
   console.log('Connection established');
 });
 
+app.get('/', (req, res) => {
+  res.sendFile('index.html');
+});
+
 app.get('/hello', (req, res) => {
-  res.send('Hello Word');
+  res.send('Hello World');
 });
 
 app.get('/posts', (req, res) => {
   req.accepts('application/json');
   req.header('content-type', 'application/json');
-  conn.query(`SELECT * FROM post`, (err, result) => {
+  conn.query(`SELECT * FROM posts`, (err, result) => {
     if (err) {
       res.status(500).json({ error: `database error` });
       return;
@@ -42,18 +47,21 @@ app.get('/posts', (req, res) => {
 });
 
 app.post('/posts', (req, res) => {
+  const timestamp = parseInt(new Date().getTime());
   req.accepts('application/json');
   req.header('content-type', 'application/json');
-  let post = {
-    title: JSON.parse(req.body).title,
-    url: JSON.parse(req.body).url,
-  };
-  conn.query('INSERT INTO posts SET ?', post, (err, rows) => {
-    if (err) {
-      res.status(500).json({ error: `database error` });
+  conn.query(
+    'INSERT INTO posts (title, url, timestamp, score) VALUES (?,?,?,?);',
+    [(req.body.title, req.body.url, timestamp, 0)],
+    (err, rows) => {
+      if (err) {
+        res.status(500).json(err);
+        console.log(err);
+        return;
+      }
+      res.send('siker');
     }
-    res.status(200).json({ rows });
-  });
+  );
 });
 
 app.listen(PORT, () => {
