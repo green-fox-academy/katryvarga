@@ -23,43 +23,127 @@ conn.connect((err) => {
   console.log('Connection established');
 });
 
-app.get('/', (req, res) => {
-  res.sendFile('index.html');
-});
-
 app.get('/hello', (req, res) => {
   res.send('Hello World');
 });
 
 app.get('/posts', (req, res) => {
-  req.accepts('application/json');
-  req.header('content-type', 'application/json');
-  conn.query(`SELECT * FROM posts`, (err, result) => {
+  conn.query(`SELECT * FROM posts`, (err, rows) => {
     if (err) {
-      res.status(500).json({ error: `database error` });
+      res.status(500).json(err);
       return;
     }
-    return res
-      .status(200)
-      .contentType(`application/json`)
-      .json({ posts: result });
+    return res.status(200).json(rows);
   });
 });
 
 app.post('/posts', (req, res) => {
-  const timestamp = parseInt(new Date().getTime());
-  req.accepts('application/json');
-  req.header('content-type', 'application/json');
+  let timestamp = parseInt(new Date().getTime());
   conn.query(
-    'INSERT INTO posts (title, url, timestamp, score) VALUES (?,?,?,?);',
-    [(req.body.title, req.body.url, timestamp, 0)],
+    `INSERT INTO posts (title, url, timestamp, score)
+              VALUES (?,?,?,?);`,
+    [req.body.title, req.body.url, timestamp, 0],
     (err, rows) => {
       if (err) {
         res.status(500).json(err);
-        console.log(err);
         return;
       }
-      res.send('siker');
+
+      conn.query(
+        `SELECT id, title, url, timestamp, score FROM posts WHERE id = ${rows.insertId}`,
+        (err, rows) => {
+          if (err) {
+            res.status(500).json(err);
+            return;
+          }
+          res.status(200).json(rows);
+        }
+      );
+    }
+  );
+});
+
+app.put('/posts/:id/upvote', (req, res) => {
+  let id = req.params.id;
+  conn.query(
+    'UPDATE posts SET score = score + 1 WHERE id = ?',
+    id,
+    (err, rows) => {
+      if (err) {
+        res.status(500).json(err);
+        return;
+      }
+      conn.query(
+        `SELECT id, title, url, timestamp, score FROM posts WHERE id = ${req.params.id}`,
+        (err, rows) => {
+          if (err) {
+            res.status(500).json(err);
+            return;
+          }
+          res.status(200).json(rows);
+        }
+      );
+    }
+  );
+});
+
+app.put('/posts/:id/downvote', (req, res) => {
+  const id = req.params.id;
+  conn.query(
+    'UPDATE posts SET score = score - 1 WHERE id = ?',
+    id,
+    (err, rows) => {
+      if (err) {
+        res.status(500).json(err);
+        return;
+      }
+      conn.query(
+        `SELECT id, title, url, timestamp, score FROM posts WHERE id = ${req.params.id}`,
+        (err, rows) => {
+          if (err) {
+            res.status(500).json(err);
+            return;
+          }
+          res.status(200).json(rows);
+        }
+      );
+    }
+  );
+});
+
+app.delete('/posts/:id', (req, res) => {
+  const id = req.params.id;
+  conn.query(`DELETE FROM posts WHERE id = ?`, id, (err, rows) => {
+    if (err) {
+      res.sendStatus(500).json(err);
+      return;
+    }
+    return res.sendStatus(200);
+  });
+});
+
+app.put('/posts/:id/', (req, res) => {
+  let id = req.params.id;
+  let newtitle = req.body.title;
+
+  conn.query(
+    `UPDATE posts SET title = ? WHERE id = ?`,
+    [newtitle, id],
+    (err, rows) => {
+      if (err) {
+        res.status(500).json(err);
+        return;
+      }
+      conn.query(
+        `SELECT id, title, url, timestamp, score FROM posts WHERE id = ${id}`,
+        (err, rows) => {
+          if (err) {
+            res.status(500).json(err);
+            return;
+          }
+          res.status(200).json(rows);
+        }
+      );
     }
   );
 });
