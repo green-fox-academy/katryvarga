@@ -8,12 +8,22 @@
     <title>Newsletter</title>
   </head>
   <body>
-
-
-
-
-
-    
+    <div id="conatiner">
+      <form action="/signup" method="POST">
+        <h1>Subscribe to our newsletter</h1>
+        <div id="name">
+          <label for="full-name">Full name</label> <br />
+          <input type="text" name="fullname" placeholder="name" />
+        </div>
+        <div id="email">
+          <label for="e-mail-adress">Email adress</label> <br />
+          <input type="text" name="email" placeholder="email" />
+        </div>
+        <div id="button">
+          <button type="submit">Sign up!</button>
+        </div>
+      </form>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
