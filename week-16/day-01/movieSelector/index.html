@@ -12,39 +12,54 @@
       <div id="title">Movie Selector</div>
       <form>
         <select name="selector" id="genre-selector">
-          <option value="select">Select a genre</option>
-          <option value="sci-fi" id="scifi" class="genre">Sci-fi</option>
-          <option value="drama" id="drama" class="genre">Drama</option>
-          <option value="comedy" id="comedy" class="genre">Comedy</option>
+          <option value="">Select a genre</option>
+          <option value="Sci-fi">Sci-fi</option>
+          <option value="Drama">Drama</option>
+          <option value="Comedy">Comedy</option>
         </select>
+
         <select name="selector" id="movie-selector">
           <option value="select">Select a movie</option>
-          <option value="moon" id="moon" class="sci-fi">Moon</option>
-          <option value="2001:a space odyssey" id="odyssey" class="sci-fi">
+          <option class="Sci-fi" value="Moon" style="display: none">
+            Moon
+          </option>
+          <option
+            class="Sci-fi"
+            value="2001:A Space Odyssey"
+            style="display: none"
+          >
             2001:A Space Odyssey
           </option>
-          <option value="contact" id="contact" class="sci-fi">Contact</option>
-          <option value="darkest hour" id="darkest" class="drama">
+          <option class="Sci-fi" value="Contact" style="display: none">
+            Contact
+          </option>
+          <option class="Drama" value="Darkest Hour" style="display: none">
             Darkest Hour
           </option>
-          <option value="there will be bood" id="blood" class="drama">
+          <option
+            class="Drama"
+            value="There Will Be Blood"
+            style="display: none"
+          >
             There Will Be Blood
           </option>
-          <option value="american beauty" id="american" class="drama">
+          <option class="Drama" value="American Beauty" style="display: none">
             American Beauty
           </option>
-          <option value="airplane!" id="airplane" class="comedy">
+          <option class="Comedy" value=" Airplane!" style="display: none">
             Airplane!
           </option>
-          <option value="deadpool" id="deadpool" class="comedy">
+          <option class="Comedy" value="Deadpool" style="display: none">
             Deadpool
           </option>
-          <option value="wayne`s world" id="wayne" class="comedy">
+          <option class="Comedy" value="Wayne`s World" style="display: none">
             Wayne`s World
           </option>
         </select>
       </form>
-      <div id="selected">The selected movie is: -</div>
+      <div id="selected">
+        <p></p>
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
