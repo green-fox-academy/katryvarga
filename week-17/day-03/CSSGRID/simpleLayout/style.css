@@ -18,7 +18,7 @@ header {
   align-items: center;
   padding-left: 5%;
   background-color: rgb(255, 135, 255);
-  width: 100%;
+  width: 100%vh;
   height: 100px;
   grid-column: 1 / 19;
 }
