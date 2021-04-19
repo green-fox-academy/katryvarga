@@ -13,17 +13,65 @@ body {
   background: linear-gradient(
     50deg,
     rgba(2, 0, 36, 1) 0%,
-    rgb(191, 21, 21) 0%,
-    rgb(255, 153, 0) 100%
+    rgb(255, 74, 74) 0%,
+    rgb(253, 180, 71) 100%
   );
 }
 
 #conatiner {
   display: flex;
   justify-content: center;
-  width: 600px;
-  height: 500px;
+  align-items: center;
+  width: 500px;
+  height: 400px;
   background-color: white;
   border: none;
-  border-radius: 100px;
+  border-radius: 80px;
+  box-shadow: 22px 22px 25px 5px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 22px 22px 25px 5px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 22px 22px 25px 5px rgba(0, 0, 0, 0.45);
+}
+
+h1,
+#name,
+#email,
+#button {
+  padding: 10px;
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+input {
+  margin-top: 10px;
+  border-radius: 20px;
+  width: 300px;
+  height: 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    16deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(216, 216, 216) 0%,
+    rgba(255, 255, 255, 1) 80%
+  );
+  border: none;
+  padding: 5px;
+}
+
+button {
+  margin-left: 120px;
+  width: 100px;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: aliceblue;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    54deg,
+    rgb(37, 27, 221) 0%,
+    rgb(99, 85, 255) 0%,
+    rgba(0, 236, 205, 1) 67%
+  );
+  border: none;
 }
