@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  background-color: white;
+  height: 100vh;
+  grid-gap: 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5%;
+  background-color: rgb(255, 135, 255);
+  width: 100%vh;
+  height: 100px;
+  grid-column: 1 / 19;
+}
+
+.link {
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  background-color: rgb(129, 156, 184);
+}
+.green1 {
+  padding: 10px;
+  background-color: yellowgreen;
+  grid-column: 2 / 10;
+  grid-row: 2 / 8;
+}
+.green2 {
+  padding: 10px;
+  background-color: yellowgreen;
+  grid-column: 10 / 18;
+  grid-row: 2 / 8;
+}
+
+.green3 {
+  padding: 10px;
+  background-color: yellowgreen;
+  grid-column: 2 / 10;
+  grid-row: 8 / 15;
+}
+
+.green-red1 {
+  display: flex;
+  justify-content: center;
+  background-color: yellowgreen;
+  grid-column: 10 / 14;
+  grid-row: 8 / 15;
+}
+.green-red2 {
+  display: flex;
+  justify-content: center;
+  background-color: yellowgreen;
+  grid-column: 14 / 18;
+  grid-row: 8 / 15;
+}
+
+.red {
+  background-color: red;
+  align-self: center;
+  position: relative;
+  width: 50%;
+  height: 80%;
+}
+
+footer {
+  grid-column: 2 / 18;
+  grid-row: 15 / 17;
+  background-color: grey;
+}
