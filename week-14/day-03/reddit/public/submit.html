@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="submit.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Submit a new post</title>
+  </head>
+  <body>
+    <header style="background-image: url(./assets/space-backg1.webp)">
+      <p id="header-title">SPACE</p>
+      <p id="second-title">POST TO /R/SPACE</p> 
+    </header>
+    <div id="container">
+      <form action="http://localhost:3000/posts" method="post">
+        <label for="title">Title</label> <br />
+        <input type="text" name="title" id="title" /> <br />
+        <label for="url">URL</label> <br />
+        <input type="url" name="url" id="url" /> <br />
+      </form>
+    </div>
+    <button type="submit">SUBMIT</button>
+  </body>
+</html>
