@@ -11,8 +11,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/doubling', (req, res) => {
-  let input = req.query.input;
-  let result;
+  const input = req.query.input;
+  const result;
   if (input !== undefined) {
     result = {
       received: parseInt(input),
@@ -27,9 +27,9 @@ app.get('/doubling', (req, res) => {
 });
 
 app.get('/greeter', (req, res) => {
-  let name = req.query.name;
-  let title = req.query.title;
-  let result;
+  const name = req.query.name;
+  const title = req.query.title;
+  const result;
   if (name !== undefined && title !== undefined) {
     result = { welcome_message: `Oh, hi there ${name}, my dear ${title}!` };
   } else if (name === undefined && title === undefined) {
@@ -52,8 +52,8 @@ app.get('/greeter', (req, res) => {
 });
 
 app.get('/appenda/:word', (req, res) => {
-  let word = req.params.word;
-  let result;
+  const word = req.params.word;
+  const result;
   if (word !== undefined) {
     result = { appended: word + 'a' };
   } else {
