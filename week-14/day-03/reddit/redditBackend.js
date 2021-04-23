@@ -123,8 +123,8 @@ app.delete('/posts/:id', (req, res) => {
 });
 
 app.put('/posts/:id/', (req, res) => {
-  let id = req.params.id;
-  let newtitle = req.body.title;
+  const id = req.params.id;
+  const newtitle = req.body.title;
 
   conn.query(
     `UPDATE posts SET title = ? WHERE id = ?`,
