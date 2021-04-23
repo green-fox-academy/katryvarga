@@ -50,7 +50,7 @@ app.post('/posts', (req, res) => {
       }
 
       conn.query(
-        `SELECT id, title, url, timestamp, score FROM posts WHERE id = ${rows.insertId}`,
+        `SELECT * FROM posts WHERE id = ${rows.insertId}`,
         (err, rows) => {
           if (err) {
             res.status(500).json(err);
@@ -74,7 +74,7 @@ app.put('/posts/:id/upvote', (req, res) => {
         return;
       }
       conn.query(
-        `SELECT id, title, url, timestamp, score FROM posts WHERE id = ${req.params.id}`,
+        `SELECT * FROM posts WHERE id = ${req.params.id}`,
         (err, rows) => {
           if (err) {
             res.status(500).json(err);
@@ -98,7 +98,7 @@ app.put('/posts/:id/downvote', (req, res) => {
         return;
       }
       conn.query(
-        `SELECT id, title, url, timestamp, score FROM posts WHERE id = ${req.params.id}`,
+        `SELECT * FROM posts WHERE id = ${req.params.id}`,
         (err, rows) => {
           if (err) {
             res.status(500).json(err);
@@ -135,7 +135,7 @@ app.put('/posts/:id/', (req, res) => {
         return;
       }
       conn.query(
-        `SELECT id, title, url, timestamp, score FROM posts WHERE id = ${id}`,
+        `SELECT * FROM posts WHERE id = ${id}`,
         (err, rows) => {
           if (err) {
             res.status(500).json(err);
