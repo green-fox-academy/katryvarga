@@ -1,6 +1,6 @@
 const input = document.querySelector('input');
 const button = document.querySelector('button');
-let listElement = document.createElement('li');
+const listElement = document.createElement('li');
 const moviesList = document.querySelector('.movies');
 const characters = document.querySelector('.characters');
 
