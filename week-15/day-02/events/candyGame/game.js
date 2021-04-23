@@ -18,7 +18,7 @@ buyLollipopsBtn.addEventListener('click', () => {
 
 makeCandyRainBtn.addEventListener('click', () => {
   if (production !== 0) {
-    let multiplied = production * 10;
+    const multiplied = production * 10;
     for (let i = 0; i < multiplied; i++) {
       generateCandy();
     }
