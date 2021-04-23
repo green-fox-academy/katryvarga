@@ -1,0 +1,25 @@
+body {
+  margin: 20px;
+}
+h1 {
+  font-size: 25px;
+}
+button {
+  height: 30px;
+  width: 100px;
+  background-color: white;
+  border-radius: 7px;
+}
+.input {
+  width: 230px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#lists {
+  display: flex;
+  flex-direction: row;
+}
+.characters {
+  margin-right: 130px;
+}
