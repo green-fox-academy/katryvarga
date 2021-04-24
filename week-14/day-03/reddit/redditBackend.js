@@ -4,8 +4,13 @@ import express from 'express';
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 
 const conn = mysql.createConnection({
   host: 'localhost',
@@ -73,16 +78,13 @@ app.put('/posts/:id/upvote', (req, res) => {
         res.status(500).json(err);
         return;
       }
-      conn.query(
-        `SELECT * FROM posts WHERE id = ${req.params.id}`,
-        (err, rows) => {
-          if (err) {
-            res.status(500).json(err);
-            return;
-          }
-          res.status(200).json(rows);
+      conn.query(`SELECT * FROM posts WHERE id = ${id}`, (err, rows) => {
+        if (err) {
+          res.status(500).json(err);
+          return;
         }
-      );
+        res.status(200).json(rows);
+      });
     }
   );
 });
@@ -97,16 +99,13 @@ app.put('/posts/:id/downvote', (req, res) => {
         res.status(500).json(err);
         return;
       }
-      conn.query(
-        `SELECT * FROM posts WHERE id = ${req.params.id}`,
-        (err, rows) => {
-          if (err) {
-            res.status(500).json(err);
-            return;
-          }
-          res.status(200).json(rows);
+      conn.query(`SELECT * FROM posts WHERE id = ${id}`, (err, rows) => {
+        if (err) {
+          res.status(500).json(err);
+          return;
         }
-      );
+        res.status(200).json(rows);
+      });
     }
   );
 });
@@ -134,16 +133,13 @@ app.put('/posts/:id/', (req, res) => {
         res.status(500).json(err);
         return;
       }
-      conn.query(
-        `SELECT * FROM posts WHERE id = ${id}`,
-        (err, rows) => {
-          if (err) {
-            res.status(500).json(err);
-            return;
-          }
-          res.status(200).json(rows);
+      conn.query(`SELECT * FROM posts WHERE id = ${id}`, (err, rows) => {
+        if (err) {
+          res.status(500).json(err);
+          return;
         }
-      );
+        res.status(200).json(rows);
+      });
     }
   );
 });
