@@ -3,8 +3,6 @@ const button = document.querySelector('button');
 const listElement = document.createElement('li');
 const moviesList = document.querySelector('.movies');
 const characters = document.querySelector('.characters');
-const inputText = input.value;
-const url1 = `https://swapi.dev/api/people/?search=${inputText}`;
 const url2 = 'https://swapi.dev/api/films/';
 
 function renderHTML(data) {
@@ -27,7 +25,8 @@ function deleteMovies() {
 }
 
 button.addEventListener('click', () => {
-  fetch(url1)
+  console.log(input);
+  fetch(`https://swapi.dev/api/people/?search=${input.value}`)
     .then((response) => response.json())
     .then((result) => {
       const data = result.results;
