@@ -1,30 +1,32 @@
-window.onload = () => {
-  const submitButton = document.querySelector('button');
-  const form = document.querySelector('form');
+const title = document.querySelector('#title');
+const url = document.querySelector('#url');
+const form = document.querySelector('form');
+const button = document.querySelector('button');
 
-  submitButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    const title = document.getElementById('title').value;
-    const url = document.getElementById('url').value;
-    const requestBody = JSON.stringify({ title: title, url: url });
+button.addEventListener('click', () => {
+  console.log(title.value);
+  console.log(url.value);
 
-    // if (title && url) {
-      const xhr = new XMLHttpRequest();
-      xhr.open('POST', 'http://localhost:3000/posts');
-      xhr.setRequestHeader('content-type', 'application/json');
-      xhr.onload = () => {
-        // console.log(xhr.responseText);
-      };
-      xhr.send(requestBody);
-      // window.confirm('Your article was successfully added to the list.');
-      form.reset();
-      // backToMain();
-    // } else if (!title || !url) {
-    //   window.alert('Incomplete fields');
-    // }
-  });
-};
+  fetch('http://localhost:3000/posts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      title: title.value,
+      url: url.value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  backToMain();
+});
 
-// function backToMain() {
-//   window.location.href = './reddit.html';
-// }
+function backToMain() {
+  window.location.href = './reddit.html';
+}
