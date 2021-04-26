@@ -55,6 +55,9 @@ function generatePosts() {
         modifyButton.innerHTML = 'Modify';
         links.appendChild(deleteButton);
         links.appendChild(modifyButton);
+        modifyButton.addEventListener('click', () => {
+          location.href = 'modify.html';
+        });
       }
     })
     .catch((err) => {
