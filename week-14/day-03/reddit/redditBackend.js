@@ -12,7 +12,6 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   next();
 });
-app.use(express.urlencoded());
 
 const conn = mysql.createConnection({
   host: 'localhost',
@@ -45,30 +44,29 @@ app.get('/posts', (req, res) => {
 });
 
 app.post('/posts', (req, res) => {
-  conn.query('SELECT * FROM users WHERE id = ?', (err, rows) => {
-    console.log(rows);
-    if (err) {
-      res.status(500).json({
-        error: err.message,
-      });
-      return;
-    } else if (rows.lenght !== 0) {
-      let newPost = {
-        title: req.body.title,
-        url: req.body.url,
-      };
+  let timestamp = parseInt(new Date().getTime());
+  conn.query(
+    `INSERT INTO posts (title, url, timestamp, score)
+              VALUES (?,?,?,?);`,
+    [req.body.title, req.body.url, timestamp, 0],
+    (err, rows) => {
+      if (err) {
+        res.status(500).json(err);
+        return;
+      }
 
-      conn.query('INSERT INTO posts SET ?', newPost, (err, rows) => {
-        if (err) {
-          res.status(500).json({
-            error: err.message,
-          });
-          return;
+      conn.query(
+        `SELECT * FROM posts WHERE id = ${rows.insertId}`,
+        (err, rows) => {
+          if (err) {
+            res.status(500).json(err);
+            return;
+          }
+          res.status(200).json(rows);
         }
-        res.status(200).json(rows);
-      });
+      );
     }
-  });
+  );
 });
 
 app.put('/posts/:id/upvote', (req, res) => {
