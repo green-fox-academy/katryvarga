@@ -5,7 +5,7 @@ window.onload = () => {
     .then((response) => response.json())
     .then((result) => {
       const post = result;
-      console.log(result);
+      console.log(post);
       generatePosts(post);
     })
     .catch((err) => {
