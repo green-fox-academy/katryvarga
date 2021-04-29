@@ -1,9 +1,9 @@
 const title = document.querySelector('#title');
 const url = document.querySelector('#url');
-const form = document.querySelector('form');
-const button = document.querySelector('button');
+const form = document.querySelector('#submit-form');
 
-button.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   console.log(title.value);
   console.log(url.value);
   if (!title.value || !url.value) {
