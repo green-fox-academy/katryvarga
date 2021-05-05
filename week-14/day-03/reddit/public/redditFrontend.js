@@ -1,11 +1,12 @@
 const posts = document.querySelector('#posts');
+const baseUrl = 'http://localhost:3000';
 
 window.onload = () => {
   generatePosts();
 };
 
 function generatePosts() {
-  fetch('http://localhost:3000/posts')
+  fetch(`${baseUrl}/posts`)
     .then((response) => response.json())
     .then((result) => {
       const post = result;
@@ -67,7 +68,7 @@ function generatePosts() {
 
 function upVoting(id, buttonUp) {
   buttonUp.addEventListener('click', () => {
-    fetch(`http://localhost:3000/posts/${id}/upvote`, {
+    fetch(`${baseUrl}/posts/${id}/upvote`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -84,7 +85,7 @@ function upVoting(id, buttonUp) {
 
 function downVoting(id, buttonDown) {
   buttonDown.addEventListener('click', () => {
-    fetch(`http://localhost:3000/posts/${id}/downvote`, {
+    fetch(`${baseUrl}/posts/${id}/downvote`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -101,7 +102,7 @@ function downVoting(id, buttonDown) {
 
 function deleteArticle(id, deleteButton) {
   deleteButton.addEventListener('click', () => {
-    fetch(`http://localhost:3000/posts/${id}`, {
+    fetch(`${baseUrl}/posts/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
