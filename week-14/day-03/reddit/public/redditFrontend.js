@@ -76,7 +76,6 @@ function upVoting(id, buttonUp) {
     })
       .then((response) => response.json())
       .then((articles) => {
-        console.log(articles);
         generatePosts();
       });
     location.reload();
@@ -93,7 +92,6 @@ function downVoting(id, buttonDown) {
     })
       .then((response) => response.json())
       .then((articles) => {
-        console.log(articles);
         generatePosts();
       });
     location.reload();
@@ -110,7 +108,6 @@ function deleteArticle(id, deleteButton) {
     })
       .then((response) => response.json())
       .then((articles) => {
-        console.log(articles);
         generatePosts();
       });
     location.reload();
