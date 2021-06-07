@@ -1,1 +1,11 @@
-<p>{{ tileData.cityName }}</p>
+<div class="widget">
+  <div class="weatherIcon"><img [src]="tileData.iconUrl" /></div>
+  <div class="weatherInfo">
+    <div class="temperature">
+      <span>{{ tileData.temp }} °C</span>
+    </div>
+    <div class="description">
+      <div class="place">{{ tileData.cityName }}, {{ tileData.country }}</div>
+    </div>
+  </div>
+</div>

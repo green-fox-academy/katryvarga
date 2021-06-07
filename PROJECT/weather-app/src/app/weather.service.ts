@@ -33,7 +33,7 @@ export class WeatherService {
               cityName: weatherApiData.name,
               country: weatherApiData.sys.country,
               temp: weatherApiData.main.temp,
-              iconUrl: `http://openweathermap.org/img/wn/${weatherApiData.weather[0]}@2x.png`,
+              iconUrl: `http://openweathermap.org/img/wn/${weatherApiData.weather[0].icon}@2x.png`,
             };
           })
         )
