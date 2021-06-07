@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { IDashboardTile } from '../models/viewModels/IDashboardTile';
 import { WeatherService } from '../weather.service';
 
@@ -9,12 +10,24 @@ import { WeatherService } from '../weather.service';
 })
 export class DashboardComponent implements OnInit {
   dashboardTileDatas: IDashboardTile[];
+  oneCityTileData: IDashboardTile;
+
+  cityName = new FormControl('');
 
   constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
-    console.log('init');
-    this.weatherService.getGroupWeatherData()
-    .subscribe((response) => (this.dashboardTileDatas = response));
+    this.weatherService
+      .getGroupWeatherData()
+      .subscribe((response) => (this.dashboardTileDatas = response));
+  }
+
+  searchCity(): void {
+    this.weatherService
+      .getWeatherData(this.cityName.value)
+      .subscribe((response) => {
+        this.oneCityTileData = response;
+        this.dashboardTileDatas.push(response);
+      });
   }
 }

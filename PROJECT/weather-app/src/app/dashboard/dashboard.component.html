@@ -2,3 +2,12 @@
   *ngFor="let dashboardTile of dashboardTileDatas"
   [tileData]="dashboardTile"
 ></app-dashboard-tile>
+<div class="search">
+  <label>City search </label>
+  <input type="text" [formControl]="cityName" />
+  <button (click)="searchCity()">Search</button>
+</div>
+<app-dashboard-tile
+  *ngIf="oneCityTileData"
+  [tileData]="oneCityTileData"
+></app-dashboard-tile>
