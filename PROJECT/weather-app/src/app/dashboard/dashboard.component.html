@@ -1,2 +1,4 @@
-<p>dashboard works!</p>
-<app-dashboard-tile></app-dashboard-tile>
+<app-dashboard-tile
+  *ngFor="let dashboardTile of dashboardTileDatas"
+  [tileData]="dashboardTile"
+></app-dashboard-tile>

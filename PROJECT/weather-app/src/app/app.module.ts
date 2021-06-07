@@ -7,6 +7,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardTileComponent } from './dashboard/dashboard-tile/dashboard-tile.component';
 import { ForecastComponent } from './forecast/forecast.component';
 import { ForecastTileComponent } from './forecast/forecast-tile/forecast-tile.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,15 @@ import { ForecastTileComponent } from './forecast/forecast-tile/forecast-tile.co
     DashboardComponent,
     DashboardTileComponent,
     ForecastComponent,
-    ForecastTileComponent
+    ForecastTileComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
